@@ -1,9 +1,8 @@
 <template>
   <div id="anLeftList">
     <div class="left1">
-      <p v-if="userType=='editor'"><span class="admin-line" style="display: inline-block;margin:10px 0px 6px 12px;color: #fff;color: #6e6f7e;">Editer</span></p>
-      <p v-else="userType=='admin'"><span class="admin-line" style="display: inline-block;margin:10px 0px 6px 12px;color: #fff;color: #6e6f7e;">Admin</span></p>
-
+      <p v-if="userType=='editor'"><span class="admin-line" style="display: inline-block;margin:10px 0px 6px 12px;color: #fff;color: #6e6f7e;">企业云计算服务</span></p>
+      <p v-else="userType=='admin'"><span class="admin-line" style="display: inline-block;margin:10px 0px 6px 12px;color: #fff;color: #6e6f7e;">服务中心</span></p>
       <ul>
         <!--<p class="line-admin"></p>-->
         <li class="anclear" v-for="item in routes">
@@ -113,30 +112,23 @@
     },
     methods:{
       ...mapActions(
-        ['goToPage','leftblue','leftblue50']
+        ['goToPage',]
       ),
 
     },
     created:function(){
-
     },
     mounted:function(){
       this.$nextTick(function () {
+
           if(Cookies.get('sidebarStatus')==1){
-            setTimeout(function(){
-              this.leftblue50()
-            }.bind(this),9)
             $('.left1').hide();
             $('.left2').show();
 
           }else{
-            setTimeout(function(){
-              this.leftblue()
-            }.bind(this),9)
             $('.left2').hide();
             $('.left1').show();
           }
-
           //鼠标进入细条带有二级菜单 的时候 left2
           $('body').on('mouseenter', '.left2>ul>li', function () {
             $(this).children('div').children('ul').css({display:'block'})
@@ -145,33 +137,18 @@
           $('body').on('mouseleave', '.left2>ul>li', function (e) {
             $(this).children('div').children('ul').css({display:'none'})
           })
-          //鼠标点击带有二级菜单 的时候left2
-          $('body').on('click', '.left2>ul>li li', function (e,res) {
-//            $('.res-path').parent('li').parent('ul').parent('div').parent('li').removeClass('left-background');
-            $('.left2 .res-path').parent('li').removeClass('left-background');
-            $(this).addClass('left-background');
-            $(this).parent('ul').parent('div').parent('li').addClass('left-background');
-          })
           //点击left1有下拉菜单的选项
           $('body').on('click', '#anLeftList .left1>ul>li>div>a', function (event,res) {
             $(this).parent('div').parent('li').siblings('li').children('div').children('ul').slideUp(350)
             $(this).parent('div').parent('li').children('div').children('ul').stop(true,false).slideToggle(400)
             $(this).parent('div').parent('li').siblings('li').children('div').children('a').children('i:last-child').removeClass('fanzhuan');
             $(this).children('i:last-child').toggleClass('fanzhuan')
-            if(!$(this).siblings('ul').length){
-              $('#anLeftList li').removeClass('left-background');
-              $(this).parent('div').parent('li').addClass('left-background');
-            }
+
+
           });
-          //点击没有下拉菜单的选项
-          $('body').on('click', '#anLeftList ul>li li a ', function (event,res) {
-            window.event? window.event.cancelBubble = true : event.stopPropagation();
 
-              $('#anLeftList li').removeClass('left-background');
-              $(this).parent('li').addClass('left-background')
 
-          })
-        }
+        },
       )}
   }
 </script>
@@ -184,20 +161,16 @@
     display: block;
     text-indent: 10px;
   }
-  .left2 ul li a{
-    padding:0 20px;
-    font-size: 12px;
+  .left2>ul>li>div>a{
     width: 200px;
-    color: #fff;
-    position: relative;
-    display: block;
-    height:31px;
-    line-height: 31px;
+    height:37px !important;
+    line-height: 37px !important;
   }
   #anLeftList{}
   #anLeftList div>ul li a{
     padding:0 20px 0 16px;
     font-size: 12px;
+    width: 200px;
     color: #fff;
     position: relative;
     display: block;
@@ -234,14 +207,21 @@
     position: fixed;
     left:48px;
     display: none;
-    margin-top:-31px;
+    margin-top: -37px;
     background:#2b2b38;
   }
   .left2 ul li ul>li:first-child{
     /*padding-top: 10px;*/
   }
-  .left2 ul li ul>li a{
-    padding: 0 40px;
+ #anLeftList .left2 ul li ul>li a{
+    padding: 0px 20px 0px 16px;
+    font-size: 12px;
+    width: 200px;
+    color: #fff;
+    position: relative;
+    display: block;
+    height: 37px;
+    line-height: 37px;
     cursor: pointer;
   }
   .fanzhuan{

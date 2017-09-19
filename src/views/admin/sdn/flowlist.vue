@@ -92,7 +92,7 @@
     </div>
     <Pop v-if="pop1.popTitle" :itemss="pop1" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli flowlist">
           <li >
             <div>流名称：</div>
             <div><el-input  placeholder="请输入内容"></el-input></div>
@@ -111,7 +111,7 @@
           </li>
           <li >
             <div>源节点：</div>
-            <div>
+            <div class="duankou">
               <el-select v-model="value" placeholder="请选择">
                 <el-option
                   v-for="item in options1"
@@ -124,7 +124,7 @@
           </li>
           <li >
             <div>目标节点：</div>
-            <div>
+            <div class="duankou">
               <el-select v-model="value" placeholder="请选择">
                 <el-option
                   v-for="item in options2"
@@ -137,7 +137,7 @@
           </li>
           <li >
             <div>带宽类型：</div>
-            <div>
+            <div class="duankou">
               <el-select v-model="value" placeholder="请选择">
                 <el-option
                   v-for="item in options3"
@@ -150,7 +150,7 @@
           </li>
           <li >
             <div>是否计费：</div>
-            <div>
+            <div class="duankou">
               <el-select v-model="value" placeholder="请选择">
                 <el-option
                   v-for="item in options4"
@@ -167,7 +167,7 @@
           </li>
           <li >
             <div>QoS：</div>
-            <div>
+            <div class="duankou">
               <el-select v-model="value" placeholder="请选择">
                 <el-option
                   v-for="item in options5"

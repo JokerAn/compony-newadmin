@@ -53,7 +53,7 @@
       return {
         loginForm: {
           email: 'editor@wallstreetcn.com',
-          password: '11111s1'
+          password: '123123qaz'
         },
         loading: false,
         emailTure:true,
@@ -62,7 +62,7 @@
     },
     computed: {
       ...mapGetters([
-        'token','userName'
+        'token','longtelUserName'
       ])
     },
     methods: {
@@ -91,31 +91,50 @@
         }
       },
 
-      handleLogin() {
+//      handleLogin() {
+//        this.checkEmail();
+//        this.checkPwd();
+//        let email = this.loginForm.email.trim();
+//        let password = this.loginForm.password;
+//        console.log(1)
+//        if(this.emailTure&&this.pwdTure){
+//          this.axios.post(
+//            'https://easy-mock.com/mock/5950a2419adc231f356a6636/vue-admin/user/login',
+//            {email,password}).then(response => {
+//            console.log(response.data);
+//            console.log(response.data.data.token);
+////            Cookies.set('Admin-Token', response.data.data.token);
+//            Cookies.set('Admin-Token','editor');
+//            Cookies.set('longtelUserName', email);
+//            this.token=Cookies.get('Admin-Token');
+//            this.router.push({ path: '/' });
+//            console.log(2)
+////            location.reload()
+//          }).catch(function(res){
+//            // setTimeout(function(){mutations.getTableData(states,allRes);},allRes.tiems)
+//            console.log('ERROR--'+res)
+//          });
+//        }else{
+//          console.log('邮箱或者密码错误')
+//        }
+//
+//      }
+      handleLogin(){
         this.checkEmail();
         this.checkPwd();
         let email = this.loginForm.email.trim();
-        let password = this.loginForm.password;
-        if(this.emailTure&&this.pwdTure){
-          this.axios.post(
-            'https://easy-mock.com/mock/5950a2419adc231f356a6636/vue-admin/user/login',
-            {email,password}).then(response => {
-//            console.log(response.data);
-//            console.log(response.data.data.token);
-            Cookies.set('Admin-Token', response.data.data.token);
+        if(email.indexOf('admin')!==-1){
+            Cookies.set('Admin-Token','admin');
+        }else {
+          Cookies.set('Admin-Token', 'editor');
+        }
             Cookies.set('longtelUserName', email);
+            Cookies.set('sidebarStatus',0);
             this.token=Cookies.get('Admin-Token');
             this.router.push({ path: '/' });
             location.reload()
-          }).catch(function(res){
-            // setTimeout(function(){mutations.getTableData(states,allRes);},allRes.tiems)
-            console.log('ERROR--'+res)
-          });
-        }else{
-          console.log('邮箱或者密码错误')
-        }
 
-      }
+        }
     },
     mounted:function () {
 //      console.log(this.loginForm.email);

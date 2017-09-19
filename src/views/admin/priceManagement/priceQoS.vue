@@ -43,7 +43,7 @@
         <ul class="an-width170">
           <li >
             <div>QoS名称：</div>
-            <div>
+            <div style="margin-left: 4px;">
               <el-input v-model="input1" placeholder="请输入QoS名称"></el-input>
             </div>
           </li>
@@ -62,7 +62,7 @@
           </li>
           <li >
             <div>QoS权重：</div>
-            <div>
+            <div class="mg4">
               <el-input-number v-model="num1" ></el-input-number>
             </div>
           </li>
@@ -80,7 +80,7 @@
           </li>
           <li >
             <div>对象类型：</div>
-            <div>
+            <div  class="mg_5">
               <el-select v-model="value1" placeholder="请选择对象类型">
                 <el-option
                   v-for="item in options"
@@ -91,7 +91,7 @@
               </el-select>
             </div>
           </li>
-          <li >
+          <li>
             <div>QoS权重：</div>
             <div>
               <el-input-number v-model="num2" ></el-input-number>
@@ -216,5 +216,11 @@
 <style scoped>
   .tableSearch {
     margin: 10px 0;
+  }
+  .popContent ul li div{
+    padding: 0 2px;
+  }
+  .el-input-number{
+    width:200px;
   }
 </style>

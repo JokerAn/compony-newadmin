@@ -51,15 +51,15 @@
             <el-input v-model="input" placeholder="请输入位置名称"></el-input>
           </div>
         </li>
-        <li>
+       <!-- <li>
           <el-button type="primary">增加</el-button>
-        </li>
+        </li>-->
       </ul>
     </div>
     </Pop>
     <Pop v-if="pop2.popTitle" :itemss="pop2" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli weizhiguanli">
           <li >
             <div>位置名称：</div>
             <div>
@@ -73,25 +73,27 @@
             </div>
           </li>
           <li >
-            <div>位置权重及对象类型</div><div></div>
+            <div style="width: 220px;">位置权重及对象类型</div><div></div>
           </li>
           <li >
             <div >
               权重:
             </div>
-            <div ><el-input-number v-model="num1" ></el-input-number></div>
-            <div >
-              类型：
-            </div>
-            <div >
-              <el-select v-model="value1" >
-                <el-option
-                  v-for="item in options"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value">
-                </el-option>
-              </el-select>
+            <div class="jiajian"><el-input-number v-model="num1" ></el-input-number></div>
+            <div class="xiugaibox">
+              <div >
+                类型：
+              </div>
+              <div  class="duankou">
+                <el-select v-model="value1" >
+                  <el-option
+                    v-for="item in options"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
+                  </el-option>
+                </el-select>
+              </div>
             </div>
             <div >
               <el-button type="primary">增加</el-button>
@@ -101,19 +103,45 @@
             <div >
               权重:
             </div>
-            <div ><el-input-number v-model="num2" ></el-input-number></div>
+            <div  class="jiajian"><el-input-number v-model="num2" ></el-input-number></div>
+           <div class="xiugaibox">
+             <div >
+               类型：
+             </div>
+             <div class="duankou">
+               <el-select v-model="value2" >
+                 <el-option
+                   v-for="item in options"
+                   :key="item.value"
+                   :label="item.label"
+                   :value="item.value">
+                 </el-option>
+               </el-select>
+             </div>
+           </div>
             <div >
-              类型：
+              <el-button type="primary">移除</el-button>
             </div>
+          </li>
+          <li >
             <div >
-              <el-select v-model="value2" >
-                <el-option
-                  v-for="item in options"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value">
-                </el-option>
-              </el-select>
+              权重:
+            </div>
+            <div  class="jiajian"><el-input-number v-model="num3" ></el-input-number></div>
+            <div class="xiugaibox">
+              <div >
+                类型：
+              </div>
+              <div class="duankou">
+                <el-select v-model="value3" >
+                  <el-option
+                    v-for="item in options"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
+                  </el-option>
+                </el-select>
+              </div>
             </div>
             <div >
               <el-button type="primary">移除</el-button>
@@ -123,19 +151,69 @@
             <div >
               权重:
             </div>
-            <div ><el-input-number v-model="num3" ></el-input-number></div>
+            <div  class="jiajian"><el-input-number v-model="num4" ></el-input-number></div>
+           <div class="xiugaibox">
+             <div >
+               类型：
+             </div>
+             <div class="duankou">
+               <el-select v-model="value4" >
+                 <el-option
+                   v-for="item in options"
+                   :key="item.value"
+                   :label="item.label"
+                   :value="item.value">
+                 </el-option>
+               </el-select>
+             </div>
+           </div>
             <div >
-              类型：
+              <el-button type="primary">移除</el-button>
             </div>
+          </li>
+          <li >
             <div >
-              <el-select v-model="value3" >
-                <el-option
-                  v-for="item in options"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value">
-                </el-option>
-              </el-select>
+              权重:
+            </div>
+            <div  class="jiajian"><el-input-number v-model="num5" ></el-input-number></div>
+           <div class="xiugaibox">
+             <div >
+               类型：
+             </div>
+             <div class="duankou">
+               <el-select v-model="value5" >
+                 <el-option
+                   v-for="item in options"
+                   :key="item.value"
+                   :label="item.label"
+                   :value="item.value">
+                 </el-option>
+               </el-select>
+             </div>
+           </div>
+            <div >
+              <el-button type="primary">移除</el-button>
+            </div>
+          </li>
+          <li >
+            <div >
+              权重:
+            </div>
+            <div  class="jiajian"><el-input-number v-model="num6" ></el-input-number></div>
+            <div class="xiugaibox">
+              <div >
+                类型：
+              </div>
+              <div class="duankou">
+                <el-select v-model="value6" >
+                  <el-option
+                    v-for="item in options"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
+                  </el-option>
+                </el-select>
+              </div>
             </div>
             <div >
               <el-button type="primary">移除</el-button>
@@ -145,86 +223,22 @@
             <div >
               权重:
             </div>
-            <div ><el-input-number v-model="num4" ></el-input-number></div>
-            <div >
-              类型：
-            </div>
-            <div >
-              <el-select v-model="value4" >
-                <el-option
-                  v-for="item in options"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value">
-                </el-option>
-              </el-select>
-            </div>
-            <div >
-              <el-button type="primary">移除</el-button>
-            </div>
-          </li>
-          <li >
-            <div >
-              权重:
-            </div>
-            <div ><el-input-number v-model="num5" ></el-input-number></div>
-            <div >
-              类型：
-            </div>
-            <div >
-              <el-select v-model="value5" >
-                <el-option
-                  v-for="item in options"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value">
-                </el-option>
-              </el-select>
-            </div>
-            <div >
-              <el-button type="primary">移除</el-button>
-            </div>
-          </li>
-          <li >
-            <div >
-              权重:
-            </div>
-            <div ><el-input-number v-model="num6" ></el-input-number></div>
-            <div >
-              类型：
-            </div>
-            <div >
-              <el-select v-model="value6" >
-                <el-option
-                  v-for="item in options"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value">
-                </el-option>
-              </el-select>
-            </div>
-            <div >
-              <el-button type="primary">移除</el-button>
-            </div>
-          </li>
-          <li >
-            <div >
-              权重:
-            </div>
-            <div ><el-input-number v-model="num7" ></el-input-number></div>
-            <div >
-              类型：
-            </div>
-            <div >
-              <el-select v-model="value7" >
-                <el-option
-                  v-for="item in options"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value">
-                </el-option>
-              </el-select>
-            </div>
+            <div  class="jiajian"><el-input-number v-model="num7" ></el-input-number></div>
+           <div class="xiugaibox">
+             <div >
+               类型：
+             </div>
+             <div class="duankou">
+               <el-select v-model="value7" >
+                 <el-option
+                   v-for="item in options"
+                   :key="item.value"
+                   :label="item.label"
+                   :value="item.value">
+                 </el-option>
+               </el-select>
+             </div>
+           </div>
             <div >
               <el-button type="primary">移除</el-button>
             </div>

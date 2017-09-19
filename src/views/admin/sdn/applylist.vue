@@ -82,7 +82,7 @@
 
     <Pop v-if="pop1.popTitle" :itemss="pop1" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli yhgl">
           <li >
            <div>用户：</div>
             <div>{{applyList.selected[0].id}}</div>
@@ -93,14 +93,16 @@
           </li>
           <li>
             <div>请填写端口初装费用：</div>
-            <div><input type="text"></div>
+            <div>
+              <el-input placeholder=""></el-input>
+            </div>
           </li>
         </ul>
       </div>
     </Pop>
     <Pop v-if="pop2.popTitle"  :itemss="pop2" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170  duankouguanli fpdk">
           <li >
             <div>用户：</div>
             <div>{{applyList.selected[0].id}}</div>

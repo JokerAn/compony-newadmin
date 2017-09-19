@@ -1,7 +1,7 @@
 export default {
   userType:(state)=>state.userType,
-  userName: (state) => state.userName,
-  permission_routers: (state) => state.leftrouter,
+  longtelUserName: (state) => state.longtelUserName,
+  leftrouter: (state) => state.leftrouter,
   ziyuanyu: (state) => state.ziyuanyu,
   fuwuyu: (state) => state.fuwuyu,
   leftList: (state) => state.leftList,

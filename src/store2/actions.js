@@ -37,13 +37,6 @@ export default {
   getDates:({commit},res)=>{
     commit('getDates',res)
   },
-  leftblue:({commit},res)=>{
-    commit('leftblue',res)
-  },
-  leftblue50:({commit},res)=>{
-    commit('leftblue50',res)
-  },
-
 
 
 

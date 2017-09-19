@@ -44,10 +44,10 @@
     </div>
     <Pop v-if="pop1.popTitle" :itemss="pop1" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli islist">
           <li >
             <div>名称：</div>
-            <div>{{islList.selected[0].id}}</div>
+            <div class="marg5">{{islList.selected[0].id}}</div>
           </li>
           <li>
             <div>描述：</div>
@@ -69,7 +69,7 @@
           </li>
           <li >
             <div>仅独享：</div>
-            <div>
+            <div class="duankou">
               <el-select v-model="value1" placeholder="请选择">
                 <el-option
                   v-for="item in options1"

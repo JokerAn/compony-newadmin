@@ -1,12 +1,14 @@
 <template>
- <div>
+ <div class="anclear ">
    <p class="describe">
      <strong>CAAS划价</strong>
    </p>
-   <div class="anclear fl tableSearch" v-show="serviceSwitchPortList.hasSearch">
-     <div></div><el-input class="fl shaixuanbox" v-model="serviceSwitchPortList.keyword" placeholder="EXCEL计算单ID" style="display: inline-block"  ></el-input>
-   </div>
-     <div><el-select v-model="value" placeholder="请选择">
+   <div class="anclear fff ancontent" style="padding: 8px 6px;">
+     <div class="anclear fl tableSearch" v-show="serviceSwitchPortList.hasSearch">
+       <div></div><el-input class="fl shaixuanbox" v-model="serviceSwitchPortList.keyword" placeholder="EXCEL计算单ID" style="display: inline-block"  ></el-input>
+     </div>
+     <div style="margin: 10px;">
+       <el-select v-model="value" placeholder="请选择">
        <el-option
          v-for="item in options"
          :key="item.value"
@@ -15,8 +17,9 @@
        </el-option>
      </el-select>
      </div>
-   <div>
-     <el-button class="fr"  type="primary" icon="search" @click="searchFilter(serviceSwitchPortList)" >查询</el-button>
+     <div class="cx">
+       <el-button class="fr"  type="primary" icon="search" @click="searchFilter(serviceSwitchPortList)" >查询</el-button>
+     </div>
    </div>
  </div>
 </template>
@@ -78,5 +81,12 @@
 </script>
 
 <style rel="stylesheet/scss" lang="scss">
-
+  .cx{
+    float: left;
+    width:100%;
+    padding:0px 15px
+  }
+  .cx button{
+    float: left;
+  }
 </style>

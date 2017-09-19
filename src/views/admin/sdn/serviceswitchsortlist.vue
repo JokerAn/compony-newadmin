@@ -120,7 +120,7 @@
            <ul class="an-width170">
          <li >
            <div>端口：</div>
-           <div>{{serviceSwitchPortList.selected[0].id}}</div>
+           <div style="margin-left: 55px;">{{serviceSwitchPortList.selected[0].id}}</div>
          </li>
          <li >
            <div>VALN段：</div>
@@ -131,42 +131,53 @@
          </li>
          <li >
            <div>终止VALN ID：</div>
-           <el-input v-model="input" placeholder="请输入内容"></el-input>
-           <el-button type="primary">新增VALN分配</el-button>
+           <div>
+             <el-input v-model="input" placeholder="请输入内容"></el-input>
+             <el-button type="primary" style="margin: 10px 5px;">新增VALN分配</el-button>
+           </div>
          </li>
            </ul>
          </div>
        </Pop>
-       <Pop v-if="pop4.popTitle"  :itemss="pop4" >
-         <div>请选择目标端口所在位置：</div>
-         <div>
-           <el-select v-model="value" placeholder="请选择">
-             <el-option
-               v-for="item in options"
-               :key="item.value"
-               :label="item.label"
-               :value="item.value">
-             </el-option>
-           </el-select>
-         </div>
-         <div>请选择目标端口：</div>
-         <div>
-           <el-select v-model="value" placeholder="请选择">
-             <el-option
-               v-for="item in options"
-               :key="item.value"
-               :label="item.label"
-               :value="item.value">
-             </el-option>
-           </el-select>
-         </div>
+       <Pop v-if="pop4.popTitle"  :itemss="pop4">
+         <div class="popContent">
+           <ul class="an-width170">
+         <li>
+           <div>请选择目标端口所在位置：</div>
+           <div>
+             <el-select v-model="value" placeholder="请选择">
+               <el-option
+                 v-for="item in options"
+                 :key="item.value"
+                 :label="item.label"
+                 :value="item.value">
+               </el-option>
+             </el-select>
+           </div>
+         </li>
+         <li>
+           <div>请选择目标端口：</div>
+           <div style="margin-left: 49px;">
+             <el-select v-model="value" placeholder="请选择">
+               <el-option
+                 v-for="item in options"
+                 :key="item.value"
+                 :label="item.label"
+                 :value="item.value">
+               </el-option>
+             </el-select>
+           </div>
+         </li>
+           </ul>
+        </div>
+
        </Pop>
        <Pop v-if="pop5.popTitle"  :itemss="pop5" >
          <div class="popContent">
            <ul class="an-width170">
              <li >
                <div>端口：</div>
-               <div>{{serviceSwitchPortList.selected[0].id}}</div>
+               <div style="margin-left: 40px;">{{serviceSwitchPortList.selected[0].id}}</div>
              </li>
              <li>
                <div>带宽(Mbps)：</div>

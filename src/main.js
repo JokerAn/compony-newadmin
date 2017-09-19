@@ -16,7 +16,7 @@ import TablesData from './components/Tables'
 import fenYe from './components/fenye'
 import Pop from './components/Pop'
 import  './js/jquery'
-
+import Cookies from 'js-cookie';
 Vue.use(VueRouter);
 Vue.config.productionTip = false
 
@@ -54,6 +54,7 @@ function aaaa(){
     }
     else if(store.state.mutations.userType=='editor'){
       //筛选带editor的然后放到leftrouter中
+
       // console.log(222);
       for(var i=0;i<lengths;i++){
         if(lsrouter[i].meta!==undefined){
@@ -87,7 +88,7 @@ function aaaa(){
           // console.log(store.state.mutations.leftList[i]);
           if(store.state.mutations.leftList[i].diyu.indexOf('fuwuyu')!==-1){
             // console.log('aaaaaaa-'+i)
-            store.state.mutations.leftList.splice(i,1);
+            store.state.mutations.leftList.splice(i,1);//将服务域去掉只剩资源域
             i=i-1;
           }else{
             // console.log('我不是服务域--'+store.state.mutations.leftList[i].diyu)
@@ -134,10 +135,21 @@ router.beforeEach((to, from, next) => {
   if (store.getters.token!=='undefined'&&store.getters.token!==undefined) {
     // console.log(store.getters.token)
     // console.log(store.state.mutations.leftrouter);
-    if (to.path === '/login') {
 
-      next({ path: '/' });
-    }else {
+    if (to.path === '/login') {
+      if(store.state.mutations.userType=='admin'){
+        next({ path: '/identity/item' });
+      }else if(store.state.mutations.userType=='editor'){
+        next({ path: '/' });
+      }
+    }else if(to.path === '/dashboard'){
+      if(store.state.mutations.userType=='admin'){
+        next({ path: '/identity/item' });
+      }else{
+        next();
+      }
+    }
+    else {
       // console.log(1);
       next();
     }
@@ -154,6 +166,48 @@ router.beforeEach((to, from, next) => {
 // location.reload();
 router.afterEach(() => {
   NProgress.done();
+  // console.log(Cookies.get('sidebarStatus')==0)
+  if(Cookies.get('sidebarStatus')==0){
+
+    setTimeout(function(){
+      $('.res-path').parent('li').parent('ul').parent('div').parent('li').removeClass('left-background');
+      $('.res-path').parent('li').removeClass('left-background');
+      $('.res-path').parent('div').parent('li').removeClass('left-background');
+      // $('.left1 div').find('ul').hide(0)
+      $('.left1 div a li:last-child').removeClass('fanzhuan')
+      for(var i=0;i<$('.left1 .res-path').length;i++){
+        var path=$('.left1 .res-path').eq(i).text();
+        if(location.hash.substring(1)==path){
+          $('.left1 .res-path').eq(i).parent('li').parent('ul').siblings('a').children('i:last-child').addClass('fanzhuan');
+            $('.left1 .res-path').eq(i).parent('li').parent('ul').slideDown(400);
+            $('.left1 .res-path').eq(i).parent('li').parent('ul').parent('div').parent('li').siblings('li').find('ul').slideUp(400);
+
+          $('.res-path').eq(i).parent('li').addClass('left-background');
+          $('.res-path').eq(i).parent('div').parent('li').addClass('left-background');
+        }
+        else{}
+      }
+    }.bind(this),9)
+  }else{
+    setTimeout(function(){
+
+      $('.res-path').parent('li').parent('ul').parent('div').parent('li').removeClass('left-background');
+      $('.res-path').parent('li').removeClass('left-background');
+      $('.res-path').parent('div').parent('li').removeClass('left-background');
+      for(var i=0;i<$('.left2 .res-path').length;i++){
+        var path=$('.left2 .res-path').eq(i).text();
+        if(location.hash.substring(1)==path){
+          // console.log($('.left2 .res-path')[i])
+          $('.left2 .res-path').eq(i).parent('li').parent('ul').parent('div').parent('li').addClass('left-background');
+          $('.left2 .res-path').eq(i).parent('li').addClass('left-background');
+          $('.left2 .res-path').eq(i).parent('div').parent('li').addClass('left-background');
+        }
+        else{}
+      }
+    }.bind(this),9)
+
+  }
+  // console.log('完成了')
 });
 
 

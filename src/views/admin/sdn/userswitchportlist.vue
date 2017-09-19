@@ -59,7 +59,7 @@
     </div>
     <Pop v-if="pop1.popTitle" :itemss="pop1" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli">
           <li >
             <div>客户：</div>
             <div>
@@ -74,7 +74,7 @@
           </li>
           <li>
             <div>端口：</div>
-            <div>
+            <div class="duankou">
               <el-select v-model="value" placeholder="请选择">
                 <el-option
                   v-for="item in options"
@@ -87,7 +87,7 @@
           </li>
           <li>
             <div>是否专线：</div>
-            <div>
+            <div class="duankou">
               <el-select v-model="value1" placeholder="请选择">
                 <el-option
                   v-for="item in options1"
@@ -141,18 +141,18 @@
     </Pop>
     <Pop v-if="pop2.popTitle"  :itemss="pop2" >
       <div class="popContent">
-        <ul class="an-width170">
-          <li >
+        <ul class="an-width170 duankouguanli">
+          <li>
             <div>端口：</div>
-            <div>{{userSwitchPortList.selected[0].id}}</div>
+            <div style="margin-left: 28px;">{{userSwitchPortList.selected[0].id}}</div>
           </li>
           <li>
-            <div>所属CACTI线路编号：</div>
+            <div style="width: 130px;">所属CACTI线路编号：</div>
             <div><el-input  placeholder="请输入内容"></el-input></div>
           </li>
           <li >
             <div>标签：</div>
-            <div>
+            <div style="margin-left: 22px;">
               <el-input
                 type="textarea"
                 :rows="2"

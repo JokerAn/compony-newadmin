@@ -44,13 +44,13 @@
         <ul class="an-width170">
           <li >
             <div>定价单元名称：</div>
-            <div>
+            <div style="    padding-left:4px;">
               <el-input v-model="input1" placeholder="请输入定价单元名称"></el-input>
             </div>
           </li>
           <li >
             <div>对象类型：</div>
-            <div>
+            <div class="mg24">
               <el-select v-model="value" placeholder="请选择">
                 <el-option
                   v-for="item in options"
@@ -63,13 +63,13 @@
           </li>
           <li >
             <div>第一属性：</div>
-            <div>
+            <div class="mg20">
               <el-input v-model="input2" placeholder="请输入第一属性"></el-input>
             </div>
           </li>
           <li >
             <div>第二属性：</div>
-            <div>
+            <div class="mg20">
               <el-input v-model="input3" placeholder="请输入第二属性"></el-input>
             </div>
           </li>
@@ -87,7 +87,7 @@
           </li>
           <li >
             <div>对象类型：</div>
-            <div>
+            <div style="margin-left: 20px;">
               <el-select v-model="value1" placeholder="请选择">
                 <el-option
                   v-for="item in options"
@@ -100,13 +100,13 @@
           </li>
           <li >
             <div>第一属性：</div>
-            <div>
+            <div class="mg24">
               <el-input v-model="input5" placeholder="请输入第一属性"></el-input>
             </div>
           </li>
           <li >
             <div>第二属性：</div>
-            <div>
+            <div class="mg24">
               <el-input v-model="input6" placeholder="请输入第二属性"></el-input>
             </div>
           </li>
@@ -228,5 +228,11 @@
 <style scoped>
   .tableSearch {
     margin: 10px 0;
+  }
+  .mg20{
+    margin-left:5px;
+  }
+  .pop .popContent input{
+    width: 170px;
   }
 </style>

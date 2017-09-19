@@ -52,7 +52,7 @@
           </li>
           <li >
             <div>对象类型：</div>
-            <div>
+            <div class="mg_5">
               <el-select v-model="value1" placeholder="请选择对象类型">
                 <el-option
                   v-for="item in options"
@@ -63,9 +63,9 @@
               </el-select>
             </div>
           </li>
-          <li >
-            <div>定价QoS：</div>
-            <div>
+          <li class="dsadsa">
+            <div style="    width: 71px !important;">定价QoS：</div>
+            <div style="position: relative; width: 336px;">
               <el-time-picker
                 v-model="startTime"
                 placeholder="起始时间点">
@@ -76,9 +76,9 @@
               </el-time-picker>
             </div>
           </li>
-          <li>
+          <!--<li>
             <el-button type="primary">增加</el-button>
-          </li>
+          </li>-->
         </ul>
       </div>
     </Pop>
@@ -185,4 +185,5 @@
   .tableSearch {
      margin: 10px 0;
   }
+
 </style>

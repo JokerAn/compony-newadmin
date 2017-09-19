@@ -61,19 +61,21 @@
 
     <Pop v-if="pop1.popTitle" :itemss="pop1" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli wljhj">
           <li >
             <div>用户：</div>
-            <div>{{switchList.selected[0].id}}</div>
+            <div class="marg5">{{switchList.selected[0].id}}</div>
 
           </li>
           <li>
             <div>SDN开通申请单ID：</div>
-            <div>47</div>
+            <div class="marg5">47</div>
           </li>
           <li>
             <div>请填写端口初装费用：</div>
-            <div><input type="text"></div>
+            <div>
+              <el-input placeholder=""></el-input>
+            </div>
           </li>
         </ul>
       </div>
@@ -83,7 +85,7 @@
 
     <Pop v-if="pop2.popTitle"  :itemss="pop2" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli">
           <li >
             <div>用户：</div>
             <div>{{switchList.selected[0].id}}</div>
@@ -175,7 +177,7 @@
           alert('请仅选择一项')
         }
       },
-      pop3fun(){
+      pop2fun(){
         console.log('点击的---编辑')
       },
 

@@ -53,18 +53,18 @@
     </div>
     <Pop v-if="pop1.popTitle" :itemss="pop1" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli nodeguanli">
         <li>
         <div>Node名称：</div>
-        <div><el-input  placeholder="请输入内容"></el-input></div>
+        <div class="marg5"><el-input  placeholder="请输入内容"></el-input></div>
         </li>
         <li>
           <div>客户：</div>
-          <div><el-input  placeholder="请输入内容"></el-input></div>
+          <div class="marg5"><el-input  placeholder="请输入内容"></el-input></div>
         </li>
         <li>
           <div>用户端口：</div>
-          <div>
+          <div class="duankou">
             <el-select v-model="value" placeholder="请选择">
               <el-option
                 v-for="item in options1"
@@ -77,7 +77,7 @@
         </li>
         <li>
           <div>选择端口类型：</div>
-          <div>
+          <div class="duankou">
             <el-select v-model="value" placeholder="请选择">
               <el-option
                 v-for="item in options2"
@@ -90,7 +90,7 @@
         </li>
         <li>
           <div>IP地址：</div>
-          <div>
+          <div class="duankou">
             <el-select v-model="value" placeholder="请选择">
               <el-option
                 v-for="item in options3"

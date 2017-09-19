@@ -82,7 +82,7 @@
     </div>
     <Pop v-if="pop1.popTitle" :itemss="pop1" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli xtyh">
           <li >
             <div>*登录名称：</div>
             <div>
@@ -102,7 +102,7 @@
             </div>
           </li>
           <li>
-            <div>手　　机：：</div>
+            <div>手　　机：</div>
             <div>
               <el-input placeholder="请输入内容"></el-input>
             </div>
@@ -121,7 +121,7 @@
           </li>
           <li>
             <div>状　　态：</div>
-            <div>
+            <div class="marg5">
               <el-radio class="radio" v-model="radio" label="1">备选项</el-radio>
               <el-radio class="radio" v-model="radio" label="2">备选项</el-radio>
             </div>
@@ -132,7 +132,7 @@
     </Pop>
     <Pop v-if="pop2.popTitle" :itemss="pop2" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli xtyh">
           <li >
             <div>*登录名称：</div>
             <div>
@@ -152,7 +152,7 @@
             </div>
           </li>
           <li>
-            <div>手　　机：：</div>
+            <div>手　　机：</div>
             <div>
               <el-input placeholder="请输入内容"></el-input>
             </div>
@@ -171,7 +171,7 @@
           </li>
           <li>
             <div>状　　态：</div>
-            <div>
+            <div class="marg5">
               <el-radio class="radio" v-model="radio" label="1">备选项</el-radio>
               <el-radio class="radio" v-model="radio" label="2">备选项</el-radio>
             </div>
@@ -191,10 +191,10 @@
     </Pop>
     <Pop v-if="pop6.popTitle" :itemss="pop6" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli xtyh">
           <li >
             <div>用户：</div>
-            <div>{{usersshenfen.selected[0].id}}</div>
+            <div class="marg5">{{usersshenfen.selected[0].id}}</div>
           </li>
           <li>
             <div>新密码：</div>

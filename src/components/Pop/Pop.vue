@@ -6,8 +6,8 @@
 
       <!--两端 popq-q ，左侧 popqq-left ,右侧 popqq-right -->
       <div class="popqq clear popqq-right">
-        <el-button class="btn-black"  @click="popClose">取消</el-button>
-        <el-button class="btn-black" @click="okOk(itemss.fun)">确定</el-button>
+        <el-button class=" el-button el-button--primary" @click="okOk(itemss.fun)">确定</el-button>
+        <el-button class=" el-button el-button--default "  @click="popClose">取消</el-button>
         <!--<a href="javascript:;" class="btn btn-andefault" ng-click="popHide('index2Popcj')">取消</a>-->
         <!--<a href="javascript:;" class="btn btn-andefault">确定</a>-->
 
@@ -61,6 +61,7 @@
     -o-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     border:1px solid #aaa;
+    border-bottom:none;
     background-color: #fff;
     width:500px;
 
@@ -108,7 +109,7 @@
   .popContent ul li div{
     float: left;
     text-align: right;
-    padding:0 5px ;
+    padding-right:10px;
   }
   .popContent ul li div:last-child{
     text-align: left;
@@ -141,13 +142,14 @@
   .pop .popqq{
     height:50px;
     width:100%;
-    border-top:1px solid #aaa;
+    border-top:1px solid #dadde0;
     position: absolute;
     bottom:-49px;
-    background-color: #fff;
+    background-color: #f0f4f7;
   }
   .pop .popqq button{
     margin: 8px 20px;
+    padding: 7px 22px;
   }
   /*在左侧*/
   .pop .popqq-left button:first-child{
@@ -156,7 +158,7 @@
 
   /*在右侧*/
   .pop .popqq-right{
-    text-align: right;
+    text-align: center;
   }
   .pop .popqq-right button:first-child{
     margin-right:0;
@@ -168,5 +170,8 @@
   }
   .pop .popq-q a.btn:last-child{
     float: right;
+  }
+  .popqq-right>.el-button--primary{
+    background:#1D8CE0
   }
 </style>

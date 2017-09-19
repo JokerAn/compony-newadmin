@@ -46,6 +46,9 @@ a:hover {
   color: inherit;
   text-decoration: none;
 }
+body a{
+  color: #1f90c8;
+}
 .anclear:after{
   visibility: hidden;
   display: block;
@@ -77,7 +80,12 @@ html body .btn-blackhover:hover{
   outline: none;
   color: #fff ;
 }
-
+body .el-select .el-input .el-input__icon{
+  transform: translateY(-50%) rotateZ(180deg) scale(0.7);
+}
+.el-select .el-input .el-input__icon.is-reverse{
+  transform: translateY(-50%) scale(0.7);
+}
 
 
 
@@ -91,7 +99,11 @@ html body .btn-blackhover:hover{
     height: 0;
   }
 }
-
+h6.line1{
+  height:1px;
+  width:100%;
+  border-top:1px solid #aaa
+}
 
 .tableSearch{
   margin:10px 15px;
@@ -121,16 +133,126 @@ html body .btn-blackhover:hover{
   overflow: hidden;
   clear: both;
 }
-.an-width170 li div:first-child {
-  width: 170px;
-  margin: 0 0 0 45px;
+.an-width170>li div:first-child {
+
+  text-align: left;
 }
+.dwqewq{
+  margin-left: 28px;
+}
+.mg16{
+  margin-left: 16px;
+}
+.mg24{
+  margin-left: 24px;
+}
+.mg_5{
+  margin-left: -5px;
+}
+.mg5{
+  margin-left: 5px;
+}
+.mg11{
+  margin-left:11px;
+}
+.mg4{
+  margin-left:4px;
+}
+.duankouguanli>li div:first-child{
+  width:108px
+}
+.weizhiguanli>li div:first-child{
+  width:72px
+}
+.ziwangyanma>li div:first-child{
+  width:132px
+}
+.nodeguanli>li div:first-child{
+  width:94px
+}
+.flowlist>li div:first-child{
+  width:72px
+}
+.islist>li div:first-child{
+  width:120px
+}
+.zhzh>li div:first-child{
+  width:80px
+}
+.wljhj>li div:first-child{
+  width:130px
+}
+.xtyh>li div:first-child{
+  width:77px
+}
+.fpdk>li div:first-child{
+  width:110px
+}
+.yhgl>li div:first-child{
+  width:140px
+}
+.wljhj .marg5{
+  margin-left: 5px;
+}
+.xtyh .marg5{
+  margin-left: 5px;
+}
+.zhzh .duankou{
+  margin-left: -5px;
+}
+.islist .marg5{
+  margin-left: 5px;
+}
+.duankouguanli .duankou{
+  margin-left: -5px;
+}
+.flowlist .duankou{
+  margin-left: -5px;
+}
+.nodeguanli .marg5{
+  margin-left: 5px;
+}
+.nodeguanli .duankou{
+  margin-left: 0;
+}
+
+
+.an-width170 .dwqewq>div{
+  margin-left:23px;
+}
+.an-width170 .dsadsa>div div:first-child{
+
+}
+.an-width170 .dsadsa>div div:last-child{
+  width:110px;
+  margin-left:20px;
+}
+.mg20{
+  margin-left:28px !important;
+}
+
+.popContent ul li div{
+  padding: 0
+}
+.an-width170>li div:last-child{
+  width: 300px;
+}
+.el-input, .el-input__inner{
+  width:auto;
+
+}
+
 .an-width150 li div:first-child {
   width: 150px;
   margin: 0 0 0 45px;
 }
-
-
+.el-input-number .el-input-number__decrease,.el-input-number .el-input-number__increase{
+  height: 29px;
+  line-height: 29px;
+}
+.el-input__inner, .el-select-dropdown__item{
+  width:200px;
+}
 input.el-input__inner:focus{
   border-color:#383c4a;
 }
@@ -183,7 +305,9 @@ input.el-input__inner:focus{
   height:30px;
   font-size:12px;
 }
-
+.el-date-editor.el-input{
+  width:200px;
+}
 
 
 
@@ -289,12 +413,15 @@ input.el-input__inner:focus{
 }
 .describe{
   background: #e4eaec;
-  height:50px;
-  line-height:50px;
-  padding:0 20px;
+  line-height: 20px;
+  padding: 12px 25px;
   font-size:12px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #58666e;
+}
+.el-button.btn-black:hover,.el-button.btn-black:focus{
+  background:#000;
+  color: #fff;
 }
 .btnbox{
   padding-top: 10px;
@@ -354,18 +481,41 @@ input.el-input__inner:focus{
   border: none;
   height: 48px;
   box-shadow:none;
+  font-size:12px;
   left: -146px;
   padding: 0;
   width: 220px;
 }
-
+.el-dropdown-menu.user-dropdown>li{
+  position: relative;
+  width: 222px !important;
+  left: 0px;
+}
+.el-dropdown-menu.user-dropdown>li:hover{
+  background:#f8f8f8
+}
+.el-dropdown-menu.user-dropdown>a>li:hover{
+    background:#f8f8f8
+}
 .el-dropdown-menu__item--divided:before{
 
+}
+.dsadsa input{
+  width:108px !important;
+}
+
+.dsadsa .el-date-editor--time{
+  width: 110px;
 }
 .el-dropdown-menu.user-dropdown>a{
   float: left;
   width: 100%;
   height: 100%;
+}
+.button-pop li button:focus,.button-pop li button:hover{
+  background: #000;
+  border-color:#000;
+  color: #fff;
 }
 .el-dropdown-menu.user-dropdown>li{
   float: left;
@@ -394,4 +544,32 @@ input.el-input__inner:focus{
     display: block;
   }
 }
+.popContent .an-width170>li>div>div.el-select{
+  margin:0;
+}
+#anLeftList div > ul li a:hover{
+  .dot{
+    background: #1f90c8;
+  }
+}
 
+.popContent .an-width170>li .el-input-number{
+  width:202px;
+  margin-bottom: 10px;
+}
+
+.el-pagination__sizes .el-input__inner{
+  width:100%;
+}
+.an-width170>li>div>div>.el-select>.el-input{
+  width:auto;
+  margin-left:5px;
+}
+
+.an-width170>li .el-select>.el-input{
+  width:auto;
+  margin-left:5px;
+}
+.an-width170>li .el-select>.el-input>.el-input__icon.el-icon-caret-top{
+  right: 12px;
+}

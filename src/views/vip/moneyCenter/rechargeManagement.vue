@@ -191,7 +191,7 @@
 </script>
 <style scoped>
   .tab-list{
-    height:38px;
+    height:50px;
   }
   .tab-list_cor{
     background: #fff !important;

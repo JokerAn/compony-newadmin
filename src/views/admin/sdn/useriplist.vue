@@ -58,7 +58,7 @@
     </div>
     <Pop v-if="pop1.popTitle" :itemss="pop1" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli ziwangyanma">
           <li >
             <div>客户：</div>
             <div><el-input v-model="input" placeholder="请输入内容"></el-input></div>
@@ -72,7 +72,7 @@
             <div><el-input v-model="input" placeholder="请输入内容"></el-input></div>
           </li>
           <li>
-            <div>子网掩码(CIDR记法)：：</div>
+            <div>子网掩码(CIDR记法)：</div>
             <div><el-input v-model="input" placeholder="请输入内容"></el-input></div>
           </li>
         </ul>

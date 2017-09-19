@@ -32,7 +32,7 @@ const ConsoleHome = _import('console/consoleHome');
 const ServiceOverview = _import('console/serviceoverview');
 const CustomerImage = _import('console/customerimage');
 const BackUp = _import('console/backup');
-const LogoPerate = _import('console/logoperate');
+
 
 //计价管理
 const AssignedPriceStrategy = _import('admin/priceManagement/assignedPriceStrategy');
@@ -98,7 +98,8 @@ const AccountManagement = _import('admin/accountmanagement/accountManagement');
 
 // 登陆日志
 const LoginLog = _import('admin/loginlog/loginlog');
-
+//操作日志
+const LogoPerate = _import('admin/loginlog/logoperate');
 
 /************************   z@z   ************************/
 //资源域
@@ -285,8 +286,8 @@ routerconfigs:{
         { path: 'excelcustomer', component: ExcelCustomer, name: 'EXCEL客户账户' },
         { path: 'customer', component: Customer, name: '客户账户' },
         //客户账户二级页面
-        { path: '/management/customer!details',hidden:true, component: Customer2, name: '客户账户信息'  },
-        { path: '/management/customer!loglogin',hidden:true, component: Customer3, name: '简单登录统计'  },
+        { path: 'customer!details',hidden:true, component: Customer2, name: '客户账户信息'  },
+        { path: 'customer!loglogin',hidden:true, component: Customer3, name: '简单登录统计'  },
         { path: 'wcustomer', component: Wcustomer, name: '告警客户' },
         { path: 'verify', component: VerIfy, name: '账号认证' },
         { path: 'user', component: UseRS, name: '系统用户' }
@@ -446,6 +447,8 @@ routerconfigs:{
       meta: { role: ['editor'] },
       children: [
         { path: 'excelserver/accountManagement', component: AccountManagement2, name: '账号管理' },
+        { path: 'customer!logoperate',hidden:true, component: LogoPerate, name: '操作日志'  },
+
         { path: 'excelserver/workOrderManagement', component: WorkOrderManagement, name: '工单管理' },
         { path: 'excelserver/invoiceManagement', component: InvoiceManagement, name: '发票管理' },
         { path: 'excelserver/notificationList', component: NotificationList, name: '通知列表' },
@@ -502,8 +505,8 @@ leftrouter:[
     startDate:0,
     endDate:999999999999999999999999999999999999999,
   },
-  userType:'是打发',
-  userName:Cookies.get('longtelUserName'),
+  userType:'这是用户类型',
+  longtelUserName:Cookies.get('longtelUserName'),
 
 //镜像数据
   customerImageTableDatas:{
@@ -2370,42 +2373,6 @@ const mutations={
     mutations.searchFilter(states,res.filterData);
 
   },
-
-  //左侧导航变蓝
-  leftblue(){
-    $('.res-path').parent('li').parent('ul').parent('div').parent('li').removeClass('left-background');
-    $('.res-path').parent('li').removeClass('left-background');
-    $('.res-path').parent('div').parent('li').removeClass('left-background');
-    // $('.left1 div').find('ul').hide(0)
-    $('.left1 div a li:last-child').removeClass('fanzhan')
-    for(var i=0;i<$('.left1 .res-path').length;i++){
-      var path=$('.left1 .res-path').eq(i).text();
-      if(location.hash.substring(1)==path){
-        $('.res-path').eq(i).parent('li').parent('ul').siblings('a').children('i:last-child').addClass('fanzhuan');
-
-        $('.res-path').eq(i).parent('li').parent('ul').slideDown(400);
-        $('.res-path').eq(i).parent('li').addClass('left-background');
-        $('.res-path').eq(i).parent('div').parent('li').addClass('left-background');
-      }
-      else{}
-    }
-  },
-  leftblue50(){
-    $('.res-path').parent('li').parent('ul').parent('div').parent('li').removeClass('left-background');
-    $('.res-path').parent('li').removeClass('left-background');
-    $('.res-path').parent('div').parent('li').removeClass('left-background');
-
-    for(var i=0;i<$('.res-path').length;i++){
-      var path=$('.res-path').eq(i).text();
-      if(location.hash.substring(1)==path){
-        $('.res-path').eq(i).parent('li').parent('ul').parent('div').parent('li').addClass('left-background');
-        $('.res-path').eq(i).parent('li').addClass('left-background');
-        $('.res-path').eq(i).parent('div').parent('li').addClass('left-background');
-      }
-      else{}
-    }
-  },
-
 
 
 

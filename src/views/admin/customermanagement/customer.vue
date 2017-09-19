@@ -121,7 +121,7 @@
     </Pop>
     <Pop v-if="pop4.popTitle" :itemss="pop4" >
       <div class="popContent">
-        <ul class="an-width170">
+        <ul class="an-width170 duankouguanli zhzh">
           <li >
             <div>* 登录账户：</div>
             <div>
@@ -154,7 +154,7 @@
           </li>
           <li >
             <div>公司行业：</div>
-            <div>
+            <div class="duankou">
               <el-select v-model="value1" placeholder="请选择">
                 <el-option
                   v-for="item in options1"

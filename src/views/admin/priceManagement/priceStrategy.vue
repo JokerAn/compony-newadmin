@@ -50,13 +50,13 @@
         <ul class="an-width170">
           <li >
             <div>计价策略：</div>
-            <div>
+            <div  class="mg16">
               <el-input v-model="input" placeholder="请输入计价策略"></el-input>
             </div>
           </li>
           <li >
             <div>计价周期：</div>
-            <div>
+            <div class="mg11">
               <el-select v-model="value" placeholder="请选择对象类型">
                 <el-option
                   v-for="item in options1"
@@ -69,7 +69,7 @@
           </li>
           <li >
             <div>支付方式：</div>
-            <div>
+            <div class="mg11">
               <el-select v-model="value2" placeholder="请选择对象类型">
                 <el-option
                   v-for="item in options2"
@@ -82,7 +82,7 @@
           </li>
           <li >
             <div>对象类型：</div>
-            <div>
+            <div class="mg11">
               <el-select v-model="value1" placeholder="请选择对象类型">
                 <el-option
                   v-for="item in options"
@@ -94,14 +94,14 @@
             </div>
           </li>
           <li >
-            <div>折扣率：</div>
-            <div>
+            <div style="    margin-right:12px;">折扣率：</div>
+            <div  class="mg16">
               <el-input-number v-model="num3" ></el-input-number>
             </div>
           </li>
           <li >
           <div>计价形式：</div>
-          <div>
+          <div class="mg11">
             <el-select v-model="value4" placeholder="请选择对象类型">
               <el-option
                 v-for="item in options4"
@@ -114,7 +114,7 @@
           </li>
           <li >
             <div>是否共享：</div>
-            <div>
+            <div class="mg11">
               <el-select v-model="value5" placeholder="请选择对象类型">
                 <el-option
                   v-for="item in options5"
@@ -127,13 +127,13 @@
           </li>
           <li >
             <div>基础定价集：</div>
-            <div>
+            <div style="margin-left: 6px;">
               <el-button>选择基础定价</el-button>
             </div>
           </li>
-          <li >
+          <li  class="dsadsa">
             <div>定价QoS：</div>
-            <div>
+            <div class="mg16">
               <el-time-picker
                 v-model="startTime"
                 placeholder="起始时间点">
@@ -145,8 +145,8 @@
             </div>
           </li>
           <li >
-            <div>优先级：</div>
-            <div>
+            <div style="margin-right:13px;">优先级：</div>
+            <div class="mg16">
               <el-input-number v-model="num2" >请输入优先级</el-input-number>
             </div>
           </li>
@@ -313,4 +313,5 @@
   .tableSearch {
     margin: 10px 0;
   }
+
 </style>

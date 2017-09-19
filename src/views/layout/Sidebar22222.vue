@@ -6,22 +6,19 @@
     </div>
 
 
-    <el-select class="left-select" v-if="userType=='editor'"size="small" v-model="value" @change="diyu(value)">
+    <el-select class="left-select" v-if="userType=='editor'"size="small" v-model="value" @change="diyu">
       <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
     </el-select>
     <!--<el-menu mode="vertical" theme="dark" :default-active="$route.path" :unique-opened=true>-->
-    <sidebar-item :routes='leftListShow'></sidebar-item>
+      <sidebar-item :routes='leftListShow'></sidebar-item>
     <!--</el-menu>-->
   </div>
 
 </template>
 
 <script>
-  import Bus from '../../js/bus.js';
-  import Vue from 'vue'
   import {mapGetters,mapActions} from 'vuex'
   import SidebarItem from './SidebarItem';
-  import Cookies from 'js-cookie';
   export default {
     data() {
       return {
@@ -35,7 +32,6 @@
         value: '服务域',
         firstckick:false,
         leftListShow:[],
-        addPs:true,
 
       }
     },
@@ -50,10 +46,12 @@
       ...mapActions(
         []
       ),
-      diyu(res,url){
-        if(res==1&&this.firstckick){
-          this.firstckick=false;//让他只有第一次能进来 因为默认页面展示资源域 但是 selection 还可能在一次重复选择资源域 所以让他下次只能点击服务域才发生事件
-//          console.log(this.leftList)
+      diyu(res){
+//        console.log(res)
+//        console.log(this.firstckick)
+        if(res==1){
+
+          this.firstckick=true;
           $('.togglepage').css('display','block')
           for(var i=0;i<this.leftListShow.length;i++){
             if(this.leftListShow[i].diyu!==undefined){
@@ -64,18 +62,12 @@
             }
           }
 //          this.leftListShow=this.leftListShow.concat(this.ziyuanyu).reverse()
-          this.leftListShow=this.ziyuanyu.concat(this.leftListShow);
-//          console.log(url==undefined)
-          if(url!==undefined){
-            this.$router.push({path:url});
-          }else{
-            this.$router.push({path:'/console/survey'});
-          }
-
+          this.leftListShow=this.ziyuanyu.concat(this.leftListShow)
+          this.$router.push({path:'/console/survey'});
           localStorage.setItem("diyu", "ziyuanyu");
-          this.value='资源域'
-        }else if(res==2&&!this.firstckick){
-          this.firstckick=true;
+        }
+        else if(res==2&&this.firstckick){
+
           $('.togglepage').css('display','none')
           for(var i=0;i<this.leftListShow.length;i++){
             if(this.leftListShow[i].diyu!==undefined){
@@ -86,24 +78,15 @@
               else {}
             }
           }
-          this.leftListShow=this.fuwuyu.concat(this.leftListShow);
-          console.log(url==undefined)
-          if(url!==undefined){
-            this.$router.push({path:url});
-          }else{
-            this.$router.push({path:'/console/excelserver/cloudGateway'});
-          }
+          this.leftListShow=this.fuwuyu.concat(this.leftListShow)
+          this.$router.push({path:'/console/excelserver/cloudGateway'})
           localStorage.setItem("diyu", "fuwuyu");
-
         }
-        $( 'li').children('div').children('a').children('i:last-child').removeClass('fanzhuan');
-        if(this.addPs){
-          this.addP()
-        }
-        this.addPs=false
+//        console.log(localStorage.getItem("diyu"));
       },
       editorOrAdmin(){
         if(this.userType=='editor'){
+//          console.log(localStorage.getItem('diyu'));
           this.leftListShow=$.extend([],this.leftList);
           if(localStorage.getItem("diyu")=='fuwuyu'){
             for(var i=0;i<this.leftListShow.length;i++){
@@ -117,47 +100,20 @@
             }
             this.leftListShow=this.fuwuyu.concat(this.leftListShow)
             this.value=2;
-            this.firstckick=true;
+//            this.firstckick=true;
           }
         }else{
           this.leftListShow=this.leftrouter;
         }
-      },
-      addP(){
-        setTimeout(function(){
-          var left1LiLen=$('#anLeftList .left1>ul>li').length;
-          var left2LiLen=$('#anLeftList .left2>ul>li').length;
-          if(Cookies.get('Admin-Token')=='editor'){
-            if($('#anLeftList .left1>ul>p').length<1){
-              $('#anLeftList .left1>ul>li').eq(left1LiLen-4).before(' <p class="admin-line" style="display: inline-block;margin:10px 0px 6px 12px;color: #fff;color: #6e6f7e;">用户中心</p>');
-            }
-            if($('#anLeftList .left2>ul>p').length<1){
-              $('#anLeftList .left2>ul>li').eq(left2LiLen-4).before(`
-                <p data-v-46b0a5fa="">
-                  <span data-v-46b0a5fa="" class="admin-line admin-cuxian" style="width: 17%;">用户中心</span>
-                </p>
-              `);
-
-            }
-             }
-        },8)
       }
-
-
     },
     created:function(){
 
     },
     mounted:function () {
       this.$nextTick(function () {
-        var me=this;
-        Bus.$on("newNodeEvent", function (a) {
-          me.diyu(1,a)
-        })
-        me.editorOrAdmin();
-
-        me.addP();
-
+//        console.log($('.left-select ul li:first-child')[0])
+        this.editorOrAdmin();
       })
     }
   }

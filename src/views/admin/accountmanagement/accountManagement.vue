@@ -3,7 +3,7 @@
    <p class="describe">
      <strong>SDN用户申请</strong>管理
    </p>
-   <div>
+   <div class="zhanghgl">
      <div class="btn-title">
        <span class="active" @click="customerSet">用户设置</span>
        <span @click="editMima">修改密码</span>
@@ -208,9 +208,7 @@
   .toggle-content>div>div>p{
     padding:5px 0;
   }
-  .toggle-content>div>div>.el-select,.toggle-content>div>div>.el-input,.toggle-content>div>div>.el-input-number{
-    width: 400px;
-  }
+
   .zhanghuerror{
     margin: 0 10px;
     color: red;
@@ -218,5 +216,8 @@
   .accountManagementbtn{
     float: right;
     margin:0 30px 10px 0;
+  }
+  .zhanghgl .el-input-number--small{
+    width:auto;
   }
 </style>

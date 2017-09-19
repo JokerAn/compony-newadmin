@@ -154,7 +154,7 @@
 //点击删除
       deleteLine(){
         if(this.vipInvoiceManagement.selected.length==1){
-          this.pop(['删除',this.pop2])
+          this.pop(['系统通知',this.pop2])
         }else{
           alert('请仅选择一项')
         }
