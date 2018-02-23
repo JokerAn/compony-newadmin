@@ -23,14 +23,14 @@
       </div>
       <div class="zonglan-con-left2 ">
         <div>
-          <p>企业云计算服务</p>
+          <p>企业特制计算服务</p>
           <h6 class="line1"></h6>
           <ul>
             <li>
               <div>
-                <b class="zonglan-yunzhuji"></b><span class="fr">云主机</span>
+                <b class="zonglan-yunzhuji"></b><span class="fr">电脑</span>
               </div>
-              <p><span>您尚未购买云主机 , </span><a @click="listenChildMsg('/console/cloudHost')"> 点击购买</a></p>
+              <p><span>您尚未购买电脑 , </span><a @click="listenChildMsg('/console/cloudHost')"> 点击购买</a></p>
             </li>
             <li>
               <div>
@@ -49,18 +49,18 @@
           </ul>
         </div>
          <div>
-          <p>云安全防护服务</p>
+          <p>特制安全防护服务</p>
           <h6 class="line1"></h6>
           <ul>
             <li>
               <div>
-                <b class="zonglan-yunwg"></b><span class="fr">云网关</span>
+                <b class="zonglan-yunwg"></b><span class="fr">特制网关</span>
               </div>
               <p><a @click="goToPage(['/console/excelserver/cloudGateway'])"> 点击进入</a></p>
             </li>
             <li>
               <div>
-                <b class="zonglan-yunKD"></b><span class="fr">云抗D</span>
+                <b class="zonglan-yunKD"></b><span class="fr">特制抗D</span>
               </div>
               <p><a @click="goToPage(['/console/cloudKD'])" > 点击进入</a></p>
 
@@ -68,12 +68,12 @@
           </ul>
         </div>
         <div>
-          <p>云安全防护服务</p>
+          <p>特制安全防护服务</p>
           <h6 class="line1"></h6>
           <ul>
             <li>
               <div>
-                <b class="zonglan-yunjk"></b><span class="fr">云监控</span>
+                <b class="zonglan-yunjk"></b><span class="fr">特制监控</span>
               </div>
               <p><a @click="goToPage(['/console/excelserver/cloudWatch'])"> 点击进入</a></p>
             </li>

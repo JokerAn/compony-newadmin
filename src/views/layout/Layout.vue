@@ -85,9 +85,7 @@
         top:0;
         left:0;
         z-index:1002;
-        background:url("../../images/logo.png")no-repeat center center #353644;
-        background-size: 75%;
-        background-position: 22px 16px;
+        background:url("../../images/logo.png")no-repeat center center #000;
       }
       .logo-img2{
         cursor: pointer;

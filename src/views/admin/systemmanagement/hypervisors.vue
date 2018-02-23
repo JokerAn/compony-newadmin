@@ -14,7 +14,7 @@
         <el-table-column  prop="form" label="内存(总计)" width="80"></el-table-column>
         <el-table-column  prop="mobilePhone" label="本地存储(已用)"></el-table-column>
         <el-table-column  prop="componey" label="本地存储(总计)"></el-table-column>
-        <el-table-column  prop="address" label="云主机" width="200"></el-table-column>
+        <el-table-column  prop="address" label="电脑" width="200"></el-table-column>
 
 
       </TablesData>
@@ -120,7 +120,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.Hypervisors;
       allRes.tiems=20000;
 

@@ -17,6 +17,9 @@ import Layout from '../views/layout/Layout';
 /* login */
 const Login = _import('login/index');
 
+/* register */
+const Register = _import('register/index');
+
 /* dashboard */
 const dashboard = _import('dashboard/index');
 
@@ -27,7 +30,7 @@ const Err404 = _import('404');
 const Form = _import('page/form');
 const Table = _import('table/index');
 
-//云计算基础服务
+//特制计算基础服务
 const ConsoleHome = _import('console/consoleHome');
 const ServiceOverview = _import('console/serviceoverview');
 const CustomerImage = _import('console/customerimage');
@@ -125,7 +128,7 @@ const SecretKey = _import('vip/saft/secretKey');
 
 
 //服务域
-//安全云防护服务
+//安全特制防护服务
 const CloudGateway = _import('vip/cloudSafe/cloudGateway');
 const CloudKD = _import('vip/cloudSafe/cloudKD');
 
@@ -178,16 +181,16 @@ routerconfigs:{
         { path: 'resourceusage', component: ResourCeusage, name: '资源使用量' },
         { path: 'hypervisors', component: HypervIsors, name: '虚拟机管理' },
         { path: 'aggregates', component: AggRegates, name: '主机聚合' },
-        { path: 'instances', component: InsTances, name: '云主机' },
+        { path: 'instances', component: InsTances, name: '电脑' },
         { path: 'volumes', component: VoLumes, name: '卷' },
-        { path: 'flavors', component: FlaVors, name: '云主机类型' },
+        { path: 'flavors', component: FlaVors, name: '电脑类型' },
         { path: 'images', component: ImaGes, name: '镜像' },
         { path: 'networks', component: NetWorks, name: '网络' },
         { path: 'routers', component: RouTers, name: '路由' },
         { path: 'floating_ips', component: FloaTing_ips, name: '浮动IP' },
         { path: 'defaults', component: DeFaults, name: '默认值' },
         { path: 'recycle', component: RecYcle, name: '回收站' },
-        { path: 'metadatadefs', component: MetaData_defs, name: '云数据定义' },
+        { path: 'metadatadefs', component: MetaData_defs, name: '特制数据定义' },
         { path: 'operate', component: OperaTe, name: '管理日志' },
         { path: 'info', component: AdminInfo, name: '系统信息' },
       ]
@@ -333,7 +336,7 @@ routerconfigs:{
       diyu:'ziyuanyu',
       children: [
         { path: 'survey', component: Survey, name: '概况' },
-        { path: 'cloudHost', component: CloudHost, name: '云主机' },
+        { path: 'cloudHost', component: CloudHost, name: '电脑' },
         { path: 'image', component: Image, name: '镜像' },
       ]
     },
@@ -391,23 +394,23 @@ routerconfigs:{
 
 //服务域
 
-    //云安全防护服务
+    //特制安全防护服务
     {
       path: '/console',
       component: Layout,
       redirect: 'noredirect',
-      name: '云安全防护服务',
+      name: '特制安全防护服务',
       icon: 'iconfont icon-anquan',
       noDropdown: false,
       meta: { role: ['editor'] },
       diyu:'fuwuyu',
       children: [
-        { path: 'excelserver/cloudGateway', component: CloudGateway, name: '云网关' },
-        { path: 'cloudKD', component: CloudKD, name: '云抗D' },
+        { path: 'excelserver/cloudGateway', component: CloudGateway, name: '特制网关' },
+        { path: 'cloudKD', component: CloudKD, name: '特制抗D' },
       ]
     },
 
-    //云安全防护服务
+    //特制安全防护服务
     {
       path: '/console',
       component: Layout,
@@ -418,7 +421,7 @@ routerconfigs:{
       meta: { role: ['editor'] },
       diyu:'fuwuyu',
       children: [
-        { path: 'excelserver/cloudWatch', component: CloudWatch, name: '云监控' },
+        { path: 'excelserver/cloudWatch', component: CloudWatch, name: '特制监控' },
       ]
     },
 
@@ -483,6 +486,7 @@ routerconfigs:{
 
 leftrouter:[
   { path: '/login', component: Login, hidden: true },
+  { path: '/register', component:Register, hidden: true },
   { path: '/404', component: Err404, hidden: true },
   {
     path: '/',
@@ -2356,6 +2360,9 @@ const mutations={
   pop(states,res){
     res[1].popTitle=res[0];
 
+  },
+  changeStoreValue:function(state,res){
+    res(state);
   },
   goToPage(states,res){
     states.getVueRouter.push({path:res[0],query:{data:res[1]}})

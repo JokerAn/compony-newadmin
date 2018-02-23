@@ -53,18 +53,18 @@
         radio2:'',
         options: [{
           value: '选项1',
-          label: '龙腾云'
+          label: '恶魔小丑'
         }, {
           value: '选项2',
-          label: '测试云'
+          label: '测试特制'
         }, {
           value: '选项3',
-          label: '测试云合作伙伴1'
+          label: '测试特制合作伙伴1'
         }, {
           value: '选项4',
-          label: '测试云合作伙伴2'
+          label: '测试特制合作伙伴2'
         }, ],
-        value: '龙腾云',
+        value: '恶魔小丑',
       }
     },
     computed:mapGetters(
@@ -120,7 +120,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.verify;
       allRes.tiems=20000;
 

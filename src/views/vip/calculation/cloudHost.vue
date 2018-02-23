@@ -1,6 +1,6 @@
 <template>
   <div>
-    云主机
+    电脑
   </div>
 </template>
 <script ></script>

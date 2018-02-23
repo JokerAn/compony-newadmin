@@ -9,7 +9,7 @@
       <div class="anclear fff">
         <ul class="anclear fl button-pop">
           <li class="fl">
-            <el-button @click="huifu" ><i class="iconfont icon-init symbol"></i>恢复云主机</el-button>
+            <el-button @click="huifu" ><i class="iconfont icon-init symbol"></i>恢复电脑</el-button>
           </li>
           <li class="fl">
             <el-button @click="shanchu" ><i class="iconfont icon-chuyidong1 symbol"></i>删除</el-button>
@@ -42,7 +42,7 @@
       </div>
     </div>
     <Pop v-if="pop1.popTitle" :itemss="pop1" >
-      <p>恢复云主机</p>
+      <p>恢复电脑</p>
     </Pop>
     <Pop v-if="pop2.popTitle" :itemss="pop2" >
       <p>删除</p>
@@ -119,7 +119,7 @@
 
       huifu(){
         if(this.vipRecycle.selected.length==1){
-          this.pop(['恢复云主机',this.pop1])
+          this.pop(['恢复电脑',this.pop1])
         }else{
           alert('请仅选择一项')
         }
@@ -153,7 +153,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.vipRecycle;
       allRes.tiems=20000;
 

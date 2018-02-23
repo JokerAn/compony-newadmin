@@ -260,7 +260,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/rechargerecord';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/rechargerecord';
       allRes.datas=this.customer2Recharge;
       allRes.tiems=20000;
       this.getTableData(allRes);

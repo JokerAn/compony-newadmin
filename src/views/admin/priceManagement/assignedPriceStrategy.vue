@@ -94,7 +94,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/jjgl';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/jjgl';
       allRes.datas=this.assignedPriceStrategy;
       allRes.tiems=20000;
 

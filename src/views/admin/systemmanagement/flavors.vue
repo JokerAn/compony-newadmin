@@ -1,7 +1,7 @@
 <template>
   <div class="anclear ">
     <p class="describe">
-      云主机类型
+      电脑类型
     </p>
     <div class="anclear fff ancontent" >
       <!--按钮组-->
@@ -30,7 +30,7 @@
 
         <el-table-column  v-if=Flavors.inputIndex type="index" lable="列" fixed width="50"></el-table-column>
         <el-table-column v-if=Flavors.inputSection type="selection" fixed width="50"></el-table-column>
-        <el-table-column  prop="account" label="云主机类型"></el-table-column>
+        <el-table-column  prop="account" label="电脑类型"></el-table-column>
         <el-table-column  prop="registerTime" label="VCPU数量" width="110px"></el-table-column>
         <el-table-column  prop="email" label="内存"></el-table-column>
         <el-table-column  prop="form" label="根磁盘" width="80"></el-table-column>
@@ -159,7 +159,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.Flavors;
       allRes.tiems=20000;
 

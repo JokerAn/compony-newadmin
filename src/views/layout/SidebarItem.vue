@@ -1,7 +1,7 @@
 <template>
   <div id="anLeftList">
     <div class="left1">
-      <p v-if="userType=='editor'"><span class="admin-line" style="display: inline-block;margin:10px 0px 6px 12px;color: #fff;color: #6e6f7e;">企业云计算服务</span></p>
+      <p v-if="userType=='editor'"><span class="admin-line" style="display: inline-block;margin:10px 0px 6px 12px;color: #fff;color: #6e6f7e;">企业特制计算服务</span></p>
       <p v-else="userType=='admin'"><span class="admin-line" style="display: inline-block;margin:10px 0px 6px 12px;color: #fff;color: #6e6f7e;">服务中心</span></p>
       <ul>
         <!--<p class="line-admin"></p>-->

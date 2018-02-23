@@ -37,7 +37,7 @@
            <el-input-number size="small" :min=0 v-model="lineNum"></el-input-number>
          </div>
          <div class="anclear">
-           <p>每个云主机的日志行数</p>
+           <p>每个电脑的日志行数</p>
            <el-input-number size="small" :min=0 v-model="lineNum2"></el-input-number>
          </div>
        </div>
@@ -76,19 +76,19 @@
         page2:false,
         options: [{
           value: '选项1',
-          label: '龙腾云'
+          label: '恶魔小丑'
         }, {
           value: '选项2',
-          label: '测试云'
+          label: '测试特制'
         }, {
           value: '选项3',
-          label: '测试云合作伙伴1'
+          label: '测试特制合作伙伴1'
         }, {
           value: '选项4',
-          label: '测试云合作伙伴2'
+          label: '测试特制合作伙伴2'
         }, ],
-        language: '龙腾云',
-        timeZone: '测试云合作伙伴2',
+        language: '恶魔小丑',
+        timeZone: '测试特制合作伙伴2',
         lineNum:20,
         lineNum2:30,
         changePwd:{

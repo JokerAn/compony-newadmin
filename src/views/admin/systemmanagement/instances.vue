@@ -1,7 +1,7 @@
 <template>
   <div class="anclear ">
     <p class="describe">
-      云主机
+      电脑
     </p>
     <div class="anclear fff ancontent" >
       <!--按钮组-->
@@ -139,7 +139,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.Instances;
       allRes.tiems=20000;
 

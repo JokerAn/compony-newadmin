@@ -1,7 +1,7 @@
 <template>
   <div class="anclear ">
     <p class="describe">
-      采用云端防护模式，按需使用；同时，安全团队全程支持防护； 有效防御各类攻击，协议漏洞型、协议选项型等DDoS攻击， 挽回因网站或业务服务中断造成的诸多损失。
+      采用特制端防护模式，按需使用；同时，安全团队全程支持防护； 有效防御各类攻击，协议漏洞型、协议选项型等DDoS攻击， 挽回因网站或业务服务中断造成的诸多损失。
     </p>
     <div class="anclear fff ancontent" >
       <!--按钮组-->
@@ -146,7 +146,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.vipInvoiceManagement;
       allRes.tiems=20000;
 

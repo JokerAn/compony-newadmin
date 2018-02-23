@@ -1,7 +1,7 @@
 <template>
   <div class="anclear ">
     <p class="describe">
-      云网关是一款私有网络访问Internet的高性能网关，支持SNAT代理转发，提供双机热备、自动切换能力，最大支持5Gbps的带宽吞吐能力、1000万以上的并发连接数、10个弹性IP绑定，满足您的海量Internet访问诉求。
+      特制网关是一款私有网络访问Internet的高性能网关，支持SNAT代理转发，提供双机热备、自动切换能力，最大支持5Gbps的带宽吞吐能力、1000万以上的并发连接数、10个弹性IP绑定，满足您的海量Internet访问诉求。
     </p>
     <div class="anclear fff ancontent" >
       <!--按钮组-->
@@ -75,7 +75,7 @@
       </div>
       <ul class="list_box listbox" style="display: block;">
         <li style="border: 1px solid #000;padding: 10px;width:672px;text-align: center;">
-          面向SOHO办公企业网络、小型连锁门店:TelCloud智慧云网关（SOHO级）
+          面向SOHO办公企业网络、小型连锁门店:TelCloud智慧特制网关（SOHO级）
         </li>
         <li class="h104">
           建议带机量
@@ -160,7 +160,7 @@
       </ul>
       <ul class="list_box listbox">
         <li style="border: 1px solid #000;padding: 10px;width:671px;text-align: center;">
-          面向中小型企业、连锁门店:TelCloud智慧云网关（标准级）
+          面向中小型企业、连锁门店:TelCloud智慧特制网关（标准级）
         </li>
         <li class="h104">
           建议带机量
@@ -245,7 +245,7 @@
       </ul>
       <ul class="list_box listbox">
         <li style="border: 1px solid #000;padding: 10px;width:671px;text-align: center;">
-          面向企业、集团连锁、小型商场:TelCloud智慧云网关（企业级）
+          面向企业、集团连锁、小型商场:TelCloud智慧特制网关（企业级）
         </li>
         <li class="h104">
           建议带机量
@@ -448,7 +448,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.vipInvoiceManagement;
       allRes.tiems=20000;
 

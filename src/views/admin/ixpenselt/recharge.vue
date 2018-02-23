@@ -1,7 +1,7 @@
 <template>
   <div class="anclear ">
     <p class="describe">
-      <strong>充值 (Recharge) </strong>云平台充值总览查询与统计
+      <strong>充值 (Recharge) </strong>特制平台充值总览查询与统计
     </p>
     <div class="anclear fff ancontent" >
       <!--按钮组-->
@@ -136,7 +136,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.reCharge;
       allRes.tiems=20000;
 

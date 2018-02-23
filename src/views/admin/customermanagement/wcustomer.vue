@@ -1,7 +1,7 @@
 <template>
   <div class="anclear ">
     <p class="describe">
-      <strong>告警 ( warning ) </strong>所有云平台余额不足以及欠费的告警客户
+      <strong>告警 ( warning ) </strong>所有特制平台余额不足以及欠费的告警客户
     </p>
     <div class="anclear fff ancontent" >
       <!--按钮组-->
@@ -64,18 +64,18 @@
         radio2:'',
         options: [{
           value: '选项1',
-          label: '龙腾云'
+          label: '恶魔小丑'
         }, {
           value: '选项2',
-          label: '测试云'
+          label: '测试特制'
         }, {
           value: '选项3',
-          label: '测试云合作伙伴1'
+          label: '测试特制合作伙伴1'
         }, {
           value: '选项4',
-          label: '测试云合作伙伴2'
+          label: '测试特制合作伙伴2'
         }, ],
-        value: '龙腾云',
+        value: '恶魔小丑',
         pickerOptions2: {
           shortcuts: [{
             text: '最近一周',
@@ -160,7 +160,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.wCustomer;
       allRes.tiems=20000;
 

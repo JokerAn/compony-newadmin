@@ -34,7 +34,7 @@
         <el-table-column  prop="registerTime" label="描述" width="110px"></el-table-column>
         <el-table-column  prop="email" label="成本(1~1000)"></el-table-column>
         <el-table-column  prop="form" label="最大预留(0%~100%)" width="200"></el-table-column>
-        <el-table-column  prop="mobilePhone" label="是否仅允许独享云桥"></el-table-column>
+        <el-table-column  prop="mobilePhone" label="是否仅允许独享特制桥"></el-table-column>
 
       </TablesData>
       <!--分页-->
@@ -181,7 +181,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.islList;
       allRes.tiems=20000;
 

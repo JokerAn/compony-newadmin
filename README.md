@@ -54,7 +54,7 @@
   <li>主机聚合没做
   </li>
   <li>http://www.longtel.com/horizon/admin/volumes/
-  <h6>卷类型和硬盘快照没做</6>
+  <h6>卷类型和ssd快照没做</6>
   <li>
   <li>http://www.longtel.com/horizon/admin/info/
   <h6> 计算服务，块存储服务，哇马钢罗代理，编排服务没做</h6>

@@ -55,7 +55,7 @@
       return {
 //        selected:[],
         radio2:'',
-        value: '龙腾云',
+        value: '恶魔小丑',
         pickerOptions2: {
           shortcuts: [{
             text: '最近一周',
@@ -116,7 +116,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.customerImageTableDatas;
       allRes.tiems=20000;
 

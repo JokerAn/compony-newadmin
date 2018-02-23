@@ -17,12 +17,16 @@ import fenYe from './components/fenye'
 import Pop from './components/Pop'
 import  './js/jquery'
 import Cookies from 'js-cookie';
+import apiUrl from './js/apiUrl'
+import QS from 'qs'
+Vue.prototype.$qs=QS
 Vue.use(VueRouter);
 Vue.config.productionTip = false
 
 
 Vue.prototype.axios = axios;
-
+Vue.prototype.$urls=apiUrl
+Vue.prototype.$cookies=Cookies
 Vue.use(ElementUI);
 Vue.use(ButtonGroup);
 Vue.use(TablesData);
@@ -34,7 +38,7 @@ var router;
 function aaaa(){
   // Cookies.set('Admin-Token', data.token);
   store.state.mutations.userType=store.getters.token;
-  if (store.state.mutations.leftrouter.length === 4) {
+  if (store.state.mutations.leftrouter.length === 5) {
     var lsrouter=store.state.mutations.routerconfigs.routes;
     var lengths=store.state.mutations.routerconfigs.routes.length;
 
@@ -116,7 +120,7 @@ store.state.mutations.getVueRouter=router
 
 
 
-const whiteList = ['/login'];
+const whiteList = ['/login','/register'];
 router.beforeEach((to, from, next) => {
   // console.log('-----------我是to------------');
   // console.log(to);
@@ -133,8 +137,8 @@ router.beforeEach((to, from, next) => {
   NProgress.start();
   store.state.mutations.userType=store.getters.token;
   if (store.getters.token!=='undefined'&&store.getters.token!==undefined) {
-    // console.log(store.getters.token)
-    // console.log(store.state.mutations.leftrouter);
+    console.log(store.getters.token)
+    console.log(store.state.mutations.leftrouter);
 
     if (to.path === '/login') {
       if(store.state.mutations.userType=='admin'){

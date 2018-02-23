@@ -1,7 +1,7 @@
 <template>
   <div class="anclear ">
     <p class="describe">
-      <strong>EXCEL客户账户 </strong>EXCEL客户账户导入至云平台客户账户
+      <strong>EXCEL客户账户 </strong>EXCEL客户账户导入至特制平台客户账户
     </p>
     <div class="anclear fff ancontent" >
       <!--按钮组-->
@@ -166,7 +166,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.excelCustomer;
       allRes.tiems=20000;
 

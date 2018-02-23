@@ -1,7 +1,7 @@
 <template>
   <div class="anclear ">
     <p class="describe">
-      <strong>云桥管理 (flow) </strong>负责云桥的相关业务
+      <strong>特制桥管理 (flow) </strong>负责特制桥的相关业务
     </p>
     <div class="anclear fff ancontent" >
       <!--按钮组-->
@@ -404,7 +404,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.flowList;
       allRes.tiems=20000;
 

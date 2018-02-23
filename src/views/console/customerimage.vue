@@ -54,7 +54,7 @@ import {mapGetters,mapActions} from 'vuex'
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages';
       allRes.datas=this.customerImageTableDatas;
       allRes.tiems=20000;
 

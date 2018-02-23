@@ -1,7 +1,7 @@
 <template>
   <div class="anclear ">
     <p class="describe">
-      <strong>管理日志 </strong>云平台管理控制台系统用户操作日志
+      <strong>管理日志 </strong>特制平台管理控制台系统用户操作日志
     </p>
     <div class="anclear fff ancontent" >
       <!--按钮组-->
@@ -141,7 +141,7 @@
 
     created:function(){
       var allRes={};
-      allRes.url='http://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
+      allRes.url='https://www.easy-mock.com/mock/59701611a1d30433d8383f65/longtel.com/customerimages2';
       allRes.datas=this.Operate;
       allRes.tiems=20000;
 

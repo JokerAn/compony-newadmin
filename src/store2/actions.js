@@ -6,7 +6,9 @@ export default {
     commit('refresh')
   },
 
-
+  changeStoreValue:({commit},res)=>{
+    commit('changeStoreValue',res)
+  },
 
 
 
