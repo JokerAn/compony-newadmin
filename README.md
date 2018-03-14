@@ -22,46 +22,6 @@
   <strong> state.routerconfigs.routes </strong>数据中的顺序
 </div>
 <br>
-<ul>
-  <li>http://www.longtel.com/console/management/isl!list
-  <h6>编辑后面差一个产看拓扑的链接</h6>
-  </li>
- 
-  <li>http://www.longtel.com/console/excelserver/customer
-  <h6>excel客户账户 感觉样式不一样没做</h6>
-  </li>
-
-  <li>http://www.longtel.com/horizon/settings/
-  <h6>帐号管理没做</h6>
-  </li>
-  <li>http://www.longtel.com/console/management/consume
-  <h6>分组和行业没做 缺少“时间” 表格最后一行不一致
-  </h6>
-  </li>
-  <li>http://www.longtel.com/console/management/recharge
-  <h6>分组和行业没有做 时间缺少
-  </li>
-  <li>http://www.longtel.com/horizon/identity/
-  <h6>缺少input 表格最后一列样式不对</h6>
-  </li>
-  <li>http://www.longtel.com/horizon/admin/
-  <h6>用户概况没做</h6>
-  </li>
-  <li><h6>打不开资源使用量</h6>
-  </li>
-  <li>虚拟管理器没做
-  </li>
-  <li>主机聚合没做
-  </li>
-  <li>http://www.longtel.com/horizon/admin/volumes/
-  <h6>卷类型和ssd快照没做</6>
-  <li>
-  <li>http://www.longtel.com/horizon/admin/info/
-  <h6> 计算服务，块存储服务，哇马钢罗代理，编排服务没做</h6>
-  </li>
-  
-  
-</ul>
 <h3>点击按钮出现弹框</h3>
 el-button  :icon=''applyList.buttons[1].icon' <b> @click=" huajia"</b> >划价</el-button>
 <h5>这是弹框的内容</h5>

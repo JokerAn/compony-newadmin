@@ -347,7 +347,8 @@
         }
       },
       pop1fun(){
-        console.log(this.customerImageTableDatas.selected);
+        this.customerImageTableDatas.selected[0].type='禁用';
+        console.log(this.customerImageTableDatas.selected[0].type);
       },
       qiyong(){
         if(this.customerImageTableDatas.selected.length==1){
@@ -357,6 +358,8 @@
         }
       },
       pop2fun(){
+        this.customerImageTableDatas.selected[0].type='启用';
+
         console.log(this.customerImageTableDatas.selected);
       },
       zhipai(){

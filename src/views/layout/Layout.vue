@@ -1,8 +1,8 @@
 <template>
   <div class="app-wrapper anclear" :class="{hideSidebar:!sidebar.opened}">
     <div v-if="userType=='admin'" class="sidebar-wrapper anclear">
-      <div class="logo-img logo-img1" @click="goToPage(['/identity/item'])"></div>
-      <div class="logo-img logo-img2" @click="goToPage(['/identity/item'])"></div>
+      <div class="logo-img logo-img1" @click="goToPage(['/management/customer'])"></div>
+      <div class="logo-img logo-img2" @click="goToPage(['/management/customer'])"></div>
       <sidebar class="sidebar-container anclear"></sidebar>
     </div>
     <div v-else="userType=='editor'" class="sidebar-wrapper anclear">

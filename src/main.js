@@ -142,13 +142,13 @@ router.beforeEach((to, from, next) => {
 
     if (to.path === '/login') {
       if(store.state.mutations.userType=='admin'){
-        next({ path: '/identity/item' });
+        next({ path: '/management/customer' });
       }else if(store.state.mutations.userType=='editor'){
         next({ path: '/' });
       }
     }else if(to.path === '/dashboard'){
       if(store.state.mutations.userType=='admin'){
-        next({ path: '/identity/item' });
+        next({ path: '/management/customer' });
       }else{
         next();
       }

@@ -167,34 +167,34 @@ const state={//总数据
 routerconfigs:{
   routes:[
 
-//系统管理
-    {
-      path: '/admin',
-      component: Layout,
-      redirect: 'noredirect',
-      name: '系统管理',
-      icon: 'iconfont icon-diannao',
-      noDropdown: false,
-      meta: { role: ['admin'] },
-      children: [
-        { path: 'basicfacts', component: BasicFacts, name: '概况' },
-        { path: 'resourceusage', component: ResourCeusage, name: '资源使用量' },
-        { path: 'hypervisors', component: HypervIsors, name: '虚拟机管理' },
-        { path: 'aggregates', component: AggRegates, name: '主机聚合' },
-        { path: 'instances', component: InsTances, name: '电脑' },
-        { path: 'volumes', component: VoLumes, name: '卷' },
-        { path: 'flavors', component: FlaVors, name: '电脑类型' },
-        { path: 'images', component: ImaGes, name: '镜像' },
-        { path: 'networks', component: NetWorks, name: '网络' },
-        { path: 'routers', component: RouTers, name: '路由' },
-        { path: 'floating_ips', component: FloaTing_ips, name: '浮动IP' },
-        { path: 'defaults', component: DeFaults, name: '默认值' },
-        { path: 'recycle', component: RecYcle, name: '回收站' },
-        { path: 'metadatadefs', component: MetaData_defs, name: '特制数据定义' },
-        { path: 'operate', component: OperaTe, name: '管理日志' },
-        { path: 'info', component: AdminInfo, name: '系统信息' },
-      ]
-    },
+// //系统管理
+//     {
+//       path: '/admin',
+//       component: Layout,
+//       redirect: 'noredirect',
+//       name: '测试001',
+//       icon: 'iconfont icon-diannao',
+//       noDropdown: false,
+//       meta: { role: ['admin'] },
+//       children: [
+//         { path: 'basicfacts', component: BasicFacts, name: 'AAAA' },
+//         // { path: 'resourceusage', component: ResourCeusage, name: 'BBB' },
+//         // { path: 'hypervisors', component: HypervIsors, name: '虚拟机管理' },
+//         // { path: 'aggregates', component: AggRegates, name: '主机聚合' },
+//         // { path: 'instances', component: InsTances, name: '电脑' },
+//         // { path: 'volumes', component: VoLumes, name: '卷' },
+//         // { path: 'flavors', component: FlaVors, name: '电脑类型' },
+//         // { path: 'images', component: ImaGes, name: '镜像' },
+//         { path: 'networks', component: NetWorks, name: 'BBBB' },
+//         // { path: 'routers', component: RouTers, name: '路由' },
+//         // { path: 'floating_ips', component: FloaTing_ips, name: '浮动IP' },
+//         // { path: 'defaults', component: DeFaults, name: '默认值' },
+//         // { path: 'recycle', component: RecYcle, name: '回收站' },
+//         // { path: 'metadatadefs', component: MetaData_defs, name: '特制数据定义' },
+//         // { path: 'operate', component: OperaTe, name: '管理日志' },
+//         // { path: 'info', component: AdminInfo, name: '系统信息' },
+//       ]
+//     },
     //身份管理
     {
       path: '/identity',
@@ -206,9 +206,9 @@ routerconfigs:{
       meta: { role: ['admin'] },
       children: [
         { path: 'item', component: Item, name: '项目' },
-        { path: 'users', component: Users, name: '用户' },
-        { path: 'groups', component: Groups, name: '组' },
-        { path: 'roles', component: Roles, name: '角色' },
+        // { path: 'users', component: Users, name: '用户' },
+        // { path: 'groups', component: Groups, name: '组' },
+        // { path: 'roles', component: Roles, name: '角色' },
       ]
     },
     //消费管理
@@ -221,7 +221,7 @@ routerconfigs:{
       noDropdown: false,
       meta: { role: ['admin'] },
       children: [
-        { path: 'consume', component: Consume, name: '消费总览' },
+        // { path: 'consume', component: Consume, name: '消费总览' },
         { path: 'recharge', component: Recharge, name: '充值总览' },
       ]
     },
@@ -286,13 +286,14 @@ routerconfigs:{
       noDropdown: false,
       meta: { role: ['admin'] },
       children: [
-        { path: 'excelcustomer', component: ExcelCustomer, name: 'EXCEL客户账户' },
         { path: 'customer', component: Customer, name: '客户账户' },
+        { path: 'excelcustomer', component: ExcelCustomer, name: 'EXCEL客户账户' },
+
         //客户账户二级页面
         { path: 'customer!details',hidden:true, component: Customer2, name: '客户账户信息'  },
         { path: 'customer!loglogin',hidden:true, component: Customer3, name: '简单登录统计'  },
-        { path: 'wcustomer', component: Wcustomer, name: '告警客户' },
-        { path: 'verify', component: VerIfy, name: '账号认证' },
+        // { path: 'wcustomer', component: Wcustomer, name: '告警客户' },
+        // { path: 'verify', component: VerIfy, name: '账号认证' },
         { path: 'user', component: UseRS, name: '系统用户' }
       ]
     },
@@ -329,15 +330,15 @@ routerconfigs:{
       path: '/console',
       component: Layout,
       redirect: 'noredirect',
-      name: '计算',
+      name: '测试01',
       icon: 'iconfont icon-diannao',
       noDropdown: false,
       meta: { role: ['editor'] },
       diyu:'ziyuanyu',
       children: [
         { path: 'survey', component: Survey, name: '概况' },
-        { path: 'cloudHost', component: CloudHost, name: '电脑' },
-        { path: 'image', component: Image, name: '镜像' },
+        // { path: 'cloudHost', component: CloudHost, name: '电脑' },
+        // { path: 'image', component: Image, name: '镜像' },
       ]
     },
 
@@ -346,49 +347,49 @@ routerconfigs:{
       path: '/console',
       component: Layout,
       redirect: 'noredirect',
-      name: '网络',
+      name: '测试02',
       icon: 'iconfont icon-diqiu',
       noDropdown: false,
       meta: { role: ['editor'] },
       diyu:'ziyuanyu',
       children: [
-        { path: 'networkTopology', component: NetworkTopology, name: '网络拓扑' },
-        { path: 'privateNetwork', component: PrivateNetwork, name: '私有网络' },
-        { path: 'router', component: Router2, name: '路由' },
-        { path: 'floatIP', component: FloatIP, name: '浮动IP' },
+        { path: 'networkTopology', component: NetworkTopology, name: 'AAAA' },
+        { path: 'privateNetwork', component: PrivateNetwork, name: 'BBBB' },
+        // { path: 'router', component: Router2, name: '路由' },
+        // { path: 'floatIP', component: FloatIP, name: '浮动IP' },
       ]
     },
-//存储
-    {
-      path: '/console',
-      component: Layout,
-      redirect: 'noredirect',
-      name: '存储',
-      icon: 'iconfont icon-yunyingpan',
-      noDropdown: false,
-      meta: { role: ['editor'] },
-      diyu:'ziyuanyu',
-      children: [
-        { path: 'volume', component: Volume, name: '卷' },
-        { path: 'backups', component: Backups, name: '备份' },
-      ]
-    },
-//安全
-    {
-      path: '/console',
-      component: Layout,
-      redirect: 'noredirect',
-      name: '安全',
-      icon: 'iconfont icon-shandian',
-      noDropdown: false,
-      meta: { role: ['editor'] },
-      diyu:'ziyuanyu',
-      children: [
-        { path: 'saftTeam', component: SaftTeam, name: '安全组' },
-        { path: 'secretKey', component: SecretKey, name: '密钥对' },
-        { path: 'firewall', component: Firewall, name: '防火墙' },
-      ]
-    },
+// //存储
+//     {
+//       path: '/console',
+//       component: Layout,
+//       redirect: 'noredirect',
+//       name: '存储',
+//       icon: 'iconfont icon-yunyingpan',
+//       noDropdown: false,
+//       meta: { role: ['editor'] },
+//       diyu:'ziyuanyu',
+//       children: [
+//         { path: 'volume', component: Volume, name: '卷' },
+//         { path: 'backups', component: Backups, name: '备份' },
+//       ]
+//     },
+// //安全
+//     {
+//       path: '/console',
+//       component: Layout,
+//       redirect: 'noredirect',
+//       name: '安全',
+//       icon: 'iconfont icon-shandian',
+//       noDropdown: false,
+//       meta: { role: ['editor'] },
+//       diyu:'ziyuanyu',
+//       children: [
+//         { path: 'saftTeam', component: SaftTeam, name: '安全组' },
+//         { path: 'secretKey', component: SecretKey, name: '密钥对' },
+//         { path: 'firewall', component: Firewall, name: '防火墙' },
+//       ]
+//     },
 
 
 
@@ -399,14 +400,14 @@ routerconfigs:{
       path: '/console',
       component: Layout,
       redirect: 'noredirect',
-      name: '特制安全防护服务',
+      name: '测试1',
       icon: 'iconfont icon-anquan',
       noDropdown: false,
       meta: { role: ['editor'] },
       diyu:'fuwuyu',
       children: [
-        { path: 'excelserver/cloudGateway', component: CloudGateway, name: '特制网关' },
-        { path: 'cloudKD', component: CloudKD, name: '特制抗D' },
+        { path: 'excelserver/cloudGateway', component: CloudGateway, name: 'AAAA' },
+        { path: 'cloudKD', component: CloudKD, name: 'BBBB' },
       ]
     },
 
@@ -415,13 +416,13 @@ routerconfigs:{
       path: '/console',
       component: Layout,
       redirect: 'noredirect',
-      name: '企业软件服务',
+      name: '测试2',
       icon: 'iconfont icon-guanlian',
       noDropdown: false,
       meta: { role: ['editor'] },
       diyu:'fuwuyu',
       children: [
-        { path: 'excelserver/cloudWatch', component: CloudWatch, name: '特制监控' },
+        { path: 'excelserver/cloudWatch', component: CloudWatch, name: 'AAAA' },
       ]
     },
 
@@ -430,12 +431,12 @@ routerconfigs:{
       path: '/console',
       component: Layout,
       redirect: 'noredirect',
-      name: '管理',
+      name: '测试3',
       icon: 'iconfont icon-set',
       noDropdown: false,
       meta: { role: ['editor'] },
       children: [
-        { path: 'excelserver/recycle', component: Recycle, name: '回收站' },
+        { path: 'excelserver/recycle', component: Recycle, name: 'AAAA' },
       ]
     },
 
@@ -452,9 +453,9 @@ routerconfigs:{
         { path: 'excelserver/accountManagement', component: AccountManagement2, name: '账号管理' },
         { path: 'customer!logoperate',hidden:true, component: LogoPerate, name: '操作日志'  },
 
-        { path: 'excelserver/workOrderManagement', component: WorkOrderManagement, name: '工单管理' },
+        // { path: 'excelserver/workOrderManagement', component: WorkOrderManagement, name: '工单管理' },
         { path: 'excelserver/invoiceManagement', component: InvoiceManagement, name: '发票管理' },
-        { path: 'excelserver/notificationList', component: NotificationList, name: '通知列表' },
+        // { path: 'excelserver/notificationList', component: NotificationList, name: '通知列表' },
         { path: 'excelserver/loginLog', component: LoginLog2, name: '登录日志' },
       ]
     },
